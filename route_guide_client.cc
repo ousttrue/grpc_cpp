@@ -29,11 +29,7 @@
 #include <grpcpp/create_channel.h>
 #include <grpcpp/security/credentials.h>
 #include "helper.h"
-#ifdef BAZEL_BUILD
-#include "examples/protos/route_guide.grpc.pb.h"
-#else
-#include "route_guide.grpc.pb.h"
-#endif
+#include "protos/route_guide.grpc.pb.h"
 
 using grpc::Channel;
 using grpc::ClientContext;

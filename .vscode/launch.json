@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "server",
+            "name": "client",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/server/server.exe",
+            "program": "${workspaceFolder}/build/client.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -19,6 +19,22 @@
                 }
             ],
             "externalConsole": false
-        }
+        },
+        {
+            "name": "server",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/server.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "${env:VCPKG_DIR}\\installed\\x64-windows\\bin;${env:VCPKG_DIR}\\installed\\x64-windows\\debug\\bin;${env:PATH}"
+                }
+            ],
+            "externalConsole": false
+        },
     ]
 }

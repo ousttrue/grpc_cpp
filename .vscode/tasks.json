@@ -23,6 +23,19 @@
                 "--grpc_out=."
             ],
             "problemMatcher": []
+        },
+        {
+            "label": "server",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/server.exe",
+            "args": [],
+            "options": {
+                "env": {
+                    "PATH": "${env:VCPKG_DIR}\\installed\\x64-windows\\bin;${env:VCPKG_DIR}\\installed\\x64-windows\\debug\\bin;${env:PATH}"
+                },
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
         }
     ]
 }
