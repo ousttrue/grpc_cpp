@@ -22,14 +22,18 @@
 #include <string>
 #include <vector>
 
-namespace routeguide {
+namespace routeguide
+{
 class Feature;
+};
 
-std::string GetDbFileContent(int argc, char** argv);
+namespace helper
+{
 
-void ParseDb(const std::string& db, std::vector<Feature>* feature_list);
+std::string GetDbFileContent(int argc, char **argv);
 
-}  // namespace routeguide
+void ParseDb(const std::string &db, std::vector<routeguide::Feature> *feature_list);
 
-#endif  // GRPC_COMMON_CPP_ROUTE_GUIDE_HELPER_H_
+} // namespace helper
 
+#endif // GRPC_COMMON_CPP_ROUTE_GUIDE_HELPER_H_
