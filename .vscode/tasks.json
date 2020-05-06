@@ -6,7 +6,7 @@
         {
             "label": "protoc",
             "type": "shell",
-            "command": "protoc",
+            "command": "${env:VCPKG_DIR}/packages/protobuf_x64-windows/tools/protobuf/protoc.exe",
             "args": [
                 "protos/route_guide.proto",
                 "--cpp_out=."
@@ -16,7 +16,7 @@
         {
             "label": "protoc.grpc",
             "type": "shell",
-            "command": "protoc",
+            "command": "${env:VCPKG_DIR}/packages/protobuf_x64-windows/tools/protobuf/protoc.exe",
             "args": [
                 "protos/route_guide.proto",
                 "--plugin=protoc-gen-grpc=${env:VCPKG_DIR}/packages/grpc_x64-windows/tools/grpc/grpc_cpp_plugin.exe",
