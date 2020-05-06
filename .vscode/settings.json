@@ -1,0 +1,6 @@
+{
+    "cmake.configureArgs": [
+        "-DCMAKE_PREFIX_PATH=${env:VCPKG_DIR}/installed/x64-windows"
+    ],
+    "C_Cpp.clang_format_style": "file"
+}
