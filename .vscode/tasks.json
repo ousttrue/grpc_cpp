@@ -1,0 +1,28 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "protoc",
+            "type": "shell",
+            "command": "protoc",
+            "args": [
+                "protos/route_guide.proto",
+                "--cpp_out=."
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "protoc.grpc",
+            "type": "shell",
+            "command": "protoc",
+            "args": [
+                "protos/route_guide.proto",
+                "--plugin=protoc-gen-grpc=${env:VCPKG_DIR}/packages/grpc_x64-windows/tools/grpc/grpc_cpp_plugin.exe",
+                "--grpc_out=."
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
